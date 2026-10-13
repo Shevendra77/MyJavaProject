@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#f5f7fc"><meta name="description" content="Track Java DSA placement preparation with topic-wise progress and automatic saving.">
+  <title>DSA Tracker | Java Placement Prep</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><div class="brand-icon">{ }</div><div><strong>DSA Tracker</strong><span>JAVA PLACEMENT PREP</span></div></div>
+      <div class="side-label">YOUR WORKSPACE</div>
+      <button class="nav-item active" id="allNav"><span>▦</span> All Questions <span class="nav-count" id="sideTotal">150</span></button>
+      <div class="side-label topics-label">TOPICS</div><nav id="topicNav"></nav>
+      <div class="sidebar-note"><div class="note-icon">✦</div><strong>Small steps every day.</strong><p>Consistency beats cramming. Keep going!</p></div>
+      <div class="sidebar-footer"><span class="status-dot"></span> Progress syncs automatically</div>
+    </aside>
+    <main class="main-content">
+      <header class="topbar"><div class="breadcrumb">Workspace <span>/</span> <strong id="crumbTopic">All Questions</strong></div><div class="user-chip"><div class="avatar">S</div><div><strong>Java Developer</strong><small>Placement journey</small></div></div></header>
+      <section class="page-heading"><div><div class="eyebrow">YOUR PERSONAL LEARNING SPACE</div><h1>DSA Placement Tracker<span>.</span></h1><p>One problem at a time. Track your progress, build consistency.</p></div><div class="date-chip"><span>◷</span> Progress saved automatically</div></section>
+      <section class="stats-grid">
+        <article class="stat-card"><div class="stat-top"><span>Total questions</span><span class="stat-icon purple">▦</span></div><div class="stat-value" id="totalStat">150</div><div class="stat-foot">Across 8 DSA topics</div></article>
+        <article class="stat-card"><div class="stat-top"><span>Completed</span><span class="stat-icon green">✓</span></div><div class="stat-value" id="solvedStat">0</div><div class="stat-foot"><span class="green-text" id="solvedPercent">0%</span> of your question list</div></article>
+        <article class="stat-card"><div class="stat-top"><span>Remaining</span><span class="stat-icon orange">◷</span></div><div class="stat-value" id="remainingStat">150</div><div class="stat-foot">Keep your momentum going</div></article>
+        <article class="stat-card progress-stat"><div class="stat-top"><span>Overall progress</span><span class="stat-icon blue">↗</span></div><div class="progress-number"><strong id="progressPercent">0%</strong><span>complete</span></div><div class="progress-track"><div class="progress-fill" id="overallBar"></div></div><div class="stat-foot" id="progressMessage">Your journey starts here.</div></article>
+      </section>
+      <section class="content-card">
+        <div class="section-header"><div><h2 id="listTitle">All Questions</h2><p id="listSubtitle">Work through your placement checklist topic by topic.</p></div><div class="list-count" id="visibleCount">150 questions</div></div>
+        <div class="toolbar"><label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Search questions..." aria-label="Search questions"></label><select id="statusFilter" aria-label="Filter by status"><option value="all">All status</option><option value="pending">Not solved</option><option value="solved">Solved</option></select><select id="topicFilter" aria-label="Filter by topic"><option value="all">All topics</option></select><button class="utility-btn" id="resetFilters" type="button" title="Clear search and filters">Reset</button><button class="export-btn" id="exportButton" type="button"><span aria-hidden="true">↓</span> Export CSV</button></div>
+        <div class="table-wrap"><table><thead><tr><th class="check-col">DONE</th><th>QUESTION</th><th>TOPIC</th><th>STATUS</th></tr></thead><tbody id="questionRows"><tr><td colspan="4" class="loading">Loading your questions...</td></tr></tbody></table></div>
+        <div class="empty-state hidden" id="emptyState"><div>⌕</div><strong>No questions found</strong><p>Try another search or change your filters.</p></div>
+        <div class="card-footer"><span id="footerCount">Showing questions</span><span><span class="status-dot"></span> Changes save automatically</span></div>
+      </section>
+      <footer class="page-footer">Built for consistent practice <span>♥</span> <span class="footer-right">Java · Spring Boot · MySQL</span></footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body></html>
